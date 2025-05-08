@@ -12,13 +12,11 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
 @RequestMapping("api/v1/subs/stats/top")
-@Tag(name = "SubController", description = "Контроллер для работы со статистикой по подпискам")
+@Tag(name = "SubStatsController", description = "Контроллер для работы со статистикой по подпискам")
 public interface SubStatsController {
 
     @GetMapping

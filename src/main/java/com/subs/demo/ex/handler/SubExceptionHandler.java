@@ -27,8 +27,8 @@ public class SubExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
     @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
-    @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<ErrorDto> handleException(RuntimeException ex, WebRequest request) {
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorDto> handleOtherException(Exception ex, WebRequest request) {
         log.error("some problem: {}", ex.getMessage());
         return new ResponseEntity<>(ErrorDto.builder()
                 .message(ex.getMessage())
